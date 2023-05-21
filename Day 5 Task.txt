@@ -1,0 +1,141 @@
+		
+		
+			Day 5 Task
+		
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)		
+
+		
+		var json = [{
+			"id" : "Vasanth", 
+			"msg"   : "For the given JSON iterate over all for loops (for, for in, for of, forEach)",
+			"task" : "Guvi Task",
+			"mail": "vasanth@gmail.com"
+		},
+		{
+			"id" : "Kumar", 
+			"msg"   : "For the given JSON iterate over all for loops (for, for in, for of, forEach)",
+			"task" : "Guvi Task",
+			"mail": "kumar@gmail.com"
+		}];
+		
+		
+		//for loop
+		for(var i = 0; i < json.length; i++) {
+			var obj = json[i];
+
+			console.log(obj.id);
+			console.log(obj.msg);
+			console.log(obj.task);
+			console.log(obj.mail);
+
+		}
+
+		//for Each
+		json.forEach(function(obj) { console.log(obj.msg); });
+
+
+		//for In
+		for (var key in json) {
+		if (json.hasOwnProperty(key)) {
+		  console.log(json[key].id);
+		  //console.log(json[key].msg);
+		 
+		}
+		}
+
+		//for Of
+		let text = "";
+		for (let x of json[key].id) {
+		 text += x; 
+		}
+		 console.log(text);
+
+
+
+2. 	Create your own Resume data using JSON format
+
+
+		let myResume={
+			"basics": {
+			  "name": "Vasanth",
+			  "email": "vasanth123@gamil.com",
+			  "phone": 9876543210,
+			  "degree": "B.E",
+			  "location": {
+				"address": "140/82, Othavadai Street, Nammalwarpet",
+				"postalCode": 600012,
+				"city": "Chennai",
+				"state": "Tamilnadu",
+				"country": "India"
+			  },
+			  "profiles": [
+				{
+				  "website": "https://www.linkedin.com/in/vasantha-kumar-b70300219/",
+				  "github":"https://github.com/Vasi-18"
+				}
+			  ]
+			},
+			"work": [
+			  {
+				"company": "BA Technology",
+				"position": "Frontend Developer",
+				"startDate": "25-04-2022",
+				"endDate": "28-04-2023",
+				"summary": "I am Web Designer of BA Technology i have done lot of projects using HTML, CSS, JAVASCRIPT, BOOTSTRAP, ",
+			  },
+			],
+			"education": [
+			  {
+				"institution": "S.A Engineering College",
+				"department": "Electronics Communication Engineering",
+				"studyType": "fulltime",
+				"batch start year": 2018,
+				"batch end year": 2021,
+				"gpa": 8.1,
+			  }
+			],
+			"skills": [
+			  {
+				"name": "python,javascript",
+				"level": "beginer",
+				"project": [
+				  "Dynamic Websites"
+				]
+			  }
+			],
+			"languages": [
+			  {
+				"language": "Tamil,Enlish",
+			  }
+			],
+		  }
+		  console.log(myResume);
+		 
+
+3. Read about the difference between window screen and document in javascript	
+
+
+		Window:
+		
+			1. setTimeout() and setInterval() binding event handlers to a timer
+			2. location giving the current URL
+			3. history with methods back() and forward() giving the tab's mutable history
+			4. navigator describing the browser software
+			
+		Screen:
+
+			1. screen properties width and height are the full screen
+			2. screen properties availWidth and availHeight omit the toolbar
+			
+		Document:
+
+			<body>
+			  <p id="firstPara"> This is the first paragraph.</p>
+			</body>
+			the paragraph element can be referenced by any of the following:
+
+			1. window.firstPara or window["firstPara"]
+			2. document.getElementById("firstPara")
+			3. document.querySelector("#firstPara")
+			4. document.body.firstChild
+			5. document.body.children[0]
